@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<body>
+  <div class="content">
+    <div style="margin-bottom: 20px; color: #fff;">
+      输入椭圆的数量：<input type="text" />
+    </div>
+    <button id="btn">创建</button>
+  </div>
+</body>
+
+<script>
+  // 获取 input 表单
+  const input = document.querySelector('input')
+  // 为按钮绑定 click 事件
+  document.getElementById('btn').addEventListener('click', (ev) => {
+    console.log(ev)
+    // 当点击按钮时，将表单的值转为数字类型，并发送给主线程
+    parent.postMessage({ count: Number(input.value) }, '*')
+  })
+</script>

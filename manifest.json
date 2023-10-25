@@ -1,0 +1,7 @@
+{
+  "name": "my-plugin",
+  "id": 108928519993817,
+  "api": "1.0.0",
+  "main": "./main.js",
+  "ui": "./vite/dist/index.html"
+}
